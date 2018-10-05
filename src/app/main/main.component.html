@@ -1,0 +1,30 @@
+<mat-sidenav-container class="mat-typography">
+  <mat-sidenav mode="side" opened fixedInViewport class="mat-elevation-z8">
+    <h2>Resources Manager</h2>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a routerLink="/projects" mat-list-item routerLinkActive="active">
+        <mat-icon>work</mat-icon>
+        Projects
+      </a>
+      <a routerLink="/countries" mat-list-item routerLinkActive="active">
+        <mat-icon>public</mat-icon>
+        Countries
+      </a>
+      <a routerLink="/cities" mat-list-item routerLinkActive="active">
+        <mat-icon>location_city</mat-icon>
+        Cities
+      </a>
+      <a routerLink="/users" mat-list-item routerLinkActive="active">
+        <mat-icon>people</mat-icon>
+        Users
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row></mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
