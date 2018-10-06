@@ -29,7 +29,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "sourceMap": false,
+            "extractCss": true,
+            "aot": true
           },
           "configurations": {
             "production": {

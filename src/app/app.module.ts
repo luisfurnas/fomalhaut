@@ -1,7 +1,9 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {AngularFireModule} from 'angularfire2';
+import {ReactiveFormsModule} from '@angular/forms';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
@@ -14,8 +16,10 @@ import {MainComponent} from './main/main.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MaterialModule,
     AngularFireModule.initializeApp(firebaseConf),
+    AngularFireAuthModule,
     AppRoutingModule
   ],
   declarations: [
