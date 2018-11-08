@@ -1,0 +1,39 @@
+<mat-card class="w-25 mat-typography">
+  <mat-card-header>
+    <mat-card-title class="text-uppercase">
+      <h1>Login</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="px-2">
+    <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value, loginForm.valid)" class="mb-3">
+      <div class="row mb-2">
+        <mat-form-field class="col" appearance="outline">
+          <mat-label>Email</mat-label>
+          <mat-icon matPrefix color="accent">person</mat-icon>
+          <input matInput formControlName="email" aria-label="Email" />
+          <mat-error *ngIf="emailControl?.hasError('email')">Please enter a valid email address</mat-error>
+          <mat-error *ngIf="emailControl?.hasError('required')">Email is <strong>required</strong></mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row mb-2">
+        <mat-form-field class="col" appearance="outline">
+          <mat-label>Password</mat-label>
+          <mat-icon matPrefix color="accent">lock</mat-icon>
+          <input matInput formControlName="password" type="password" aria-label="Password" />
+          <mat-error *ngIf="passwordControl?.hasError">Password is <strong>required</strong></mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <div class="col d-inline-flex justify-content-center">
+          <button mat-flat-button color="primary">Login</button>
+        </div>
+      </div>
+    </form>
+    <mat-divider></mat-divider>
+    <div class="row pt-3">
+      <div class="col d-inline-flex justify-content-center">
+        <button mat-flat-button color="warn">Login with Google</button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
