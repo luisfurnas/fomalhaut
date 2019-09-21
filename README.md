@@ -1,27 +1,22 @@
 # Fomalhaut
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+The goal of this project is to implement a basic framework using Angular, using a plugin architecture.
+Using this, anyone could create a basic admin app, with authentication and user modules, and basic themeing capabilities.
+I named this project Fomalhaut because it's a stellar name!
 
-## Development server
+## Motivation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I wanted to create a simple blog, and was considering using WordPress for that purpose, but due to my disdain for PHP I could't go through with this idea.
+So I though to myself how it would be awesome if I could have some kinda of platform with the bare minimum, where I could then add some modules and make any backoffice app to my liking.
+I could make a blog admin app by adding maybe a Posts and Comments module, and those modules could be integrated on the platform, or perhaps loaded dynamically. Considering each module as a separate entity with it's own API and data storage, like a microservice, this platform could be of great value, or just a cool project for me to improve my coding skills.
 
-## Code scaffolding
+## Roadmap
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Implement basic authentication using Firebase Auth
+- Implement users module, also integrated with Firebase Auth
+- Implement Posts and Comments module. Kind need some basic modules to test
+- Implement plugin architecture, which should be able to load dynamically any remote NgModule
+- Implement themeing with Angular Material and CSS variables
+- Implement service discovery. Any modules going offline, or any new compatible modules going live, should be reflected on the platform
+- Platform should have two approaches to module loading: modules loaded as npm packages or loaded dynamically using service discovery
+- Maybe finally create a fully functional blog platform using this!
