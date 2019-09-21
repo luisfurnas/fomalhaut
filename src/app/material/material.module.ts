@@ -1,17 +1,15 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {
-  MatIconModule,
-  MatListModule,
-  MatMenuModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatCardModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatButtonModule,
-  ErrorStateMatcher, ShowOnDirtyErrorStateMatcher
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   imports: [
